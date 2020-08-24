@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Djkstra</title>
+    <link rel="stylesheet"
+          href="node_modules/material-components-web/dist/material-components-web.css">
+    <link href="style.css" rel="stylesheet">
+  </head>
+<body class="mdc-typography " id="dropzone">
+    <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--flexible mdc-toolbar--waterfall">
+	  	<div class="mdc-toolbar__row">
+  	    	<section class="mdc-toolbar__section mdc-toolbar__section--align-centre">
+      			<span class="mdc-toolbar__title"><h1>Dijkstra</h1></span>
+    		</section>
+  		</div>
+	</header>
+  <!--Main Toolbar-->
+	<main class="mdc-toolbar-fixed-adjust"></main>
+  <!--grid layout-->
+  <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        	<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
+        	<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+              <div id="text"></div>
+              <div id="check"></div>
+              <p class="mdc-typography--display3" align = "center">
+                  La Teoria dell'algoritmo
+              </p>
+              <p class="mdc-typography--body" align = "center">
+                L’algoritmo di Dijkstra (pubblicato nel 1956) ha lo scopo di trovare il percorso più breve tra nodi di un grafo.
+              </p>
+              <p class="mdc-typography--body" align = "center">
+                Questo algoritmo è alla base, per esempio, dei protocolli di routing link state OSPF e IS-IS.
+              </p>
+              <p class="mdc-typography--body" align = "center">
+                Con il protocollo OSPF i router hanno bisogno di conoscere approfonditamente la rete su cui operano. Avendola esplorata grazie all’algoritmo di Dijkstra, essi sono in grado di gestire casi in cui ci sono cammini con costi molto differenti verso la stessa destinazione.
+              </p>
+              <p class="mdc-typography--body" align = "center">
+                Il protocollo IS-IS, che procede in modo simile, fa sì che i router inondino la rete con informazioni link state. Ogni router accresce le informazioni ricevute aggiungendovi le proprie e si costruisce così un database di percorsi possibili – e fa tutto questo utilizzando proprio Dijkstra per calcolare quali sono i migliori cammini.
+              </p>
+              <p class="mdc-typography--body" align = "center">
+                L'algoritmo di Dijkstra consente di selezionare gli shortest path ( cammini minimi ) in un grafo ciclico caratterizzato da archi con pesi non negativi. Il cammino minimo è il percorso che permette di unire due nodi distinti del Grafo
+              </p>
+              <p class="mdc-typography--title" align = "center">
+                Su cosa si basa l'algoritmo?
+              </p>
+              <p class="mdc-typography--body" align = "center">L’algoritmo di Dijkstra visita i nodi nel grafo, in maniera simile a una ricerca in ampiezza o in profondità. In
+                ogni istante, l’insieme N dei nodi del grafo è diviso in tre parti: l’insieme dei nodi visitati V, l’insieme dei
+                nodi di frontiera F, che sono successori1 dei nodi visitati, e i nodi sconosciuti, che sono ancora da esaminare.<br>
+                Per ogni nodo z, l’algoritmo tiene traccia di un valore dz
+                , inizialmente posto uguale a ∞, e di un nodo uz
+                ,
+                inizialmente indefinito.<br>
+                L’algoritmo consiste semplicemente nel ripetere il seguente passo: si prende dall’insieme F un qualunque
+                nodo z con dz minimo, si sposta z da F in V, si spostano tutti i successori di z sconosciuti in F, e per ogni
+                successore w di z si aggiornano i valori dw e uw. L’aggiornamento viene effettuato con la regola<br>
+                dw ← min{dw, dz + pa },<br>
+                dove a è l’arco che collega z a w. Se il valore di dw è stato effettivamente modificato, allora uw viene posto
+                uguale z.<br>
+
+              </p>
+       	</div>
+       	<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3" id="table"></div>
+    </div>
+  </div>
+  </body>
+  <!--Componenti generali MDC-->
+  <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+  <!--Auto Init MDC-->
+  <script>mdc.autoInit()</script>
+  <!--Toolbar MDC-->
+  <script>
+    var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
+    toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
+  </script>
+  <!--Script della libreria p5-->
+  <script src="js/p5/p5.min.js"></script>
+  <!--Script della libreria p5.dom-->
+  <script src="js/p5/p5.dom.min.js"></script>
+  <!--Script necessario per i nodi-->
+  <script src="js/node.js"></script>
+  <!--Script per i collegamenti-->
+  <script src="js/edge.js"></script>
+  <!--Script necessario per algoritmo di dijkstra-->
+  <script src="js/coda.js"></script>
+  <!--Script necessario per la creazione del Grafo-->
+  <script src="js/graph.js"></script>
+  <!--Script per dijkstra-->
+  <script src="js/dijkstra.js"></script>
+  <!--Script del progetto-->
+  <script src="js/script.js"></script>
+  <!--Script necessari per animazioni material-->
+</html>

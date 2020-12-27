@@ -94,7 +94,7 @@ Open index.html, drag and drop prova.txt or prova-2.txt or prova-3.txt
 
 Enrico Biancotto - [@enricobiancotto](https://instagram.com/enricobiancotto) - enricobiancotto@protonmail.com
 
-Project Link: [https://github.com/enricBiancott0/verifica](https://github.com/enricBiancott0/verifica)
+Project Link: [https://github.com/enricBiancott0/dijkstra](https://github.com/enricBiancott0/dijkstra)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [start-node]: images/startNode.png

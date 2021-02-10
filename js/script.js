@@ -205,6 +205,7 @@ function leggiTesto(file) {
     //str contiene il file in più righe
     // toglie tutti carattere a capo tramite Regular Expression
     str = str.replace(/(?:\r\n|\r|\n)/g, " ");
+    str += " ";
     str = str.replace(/"  "/g, " ");
     Grafo.clear();
     iniziaGrafo();

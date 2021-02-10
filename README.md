@@ -75,11 +75,21 @@ git clone https://github.com/enricBiancott0/dijkstra
 ### Prerequisites
 
 1. [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* Open terminal and check installation typing
+* Open terminal and check installation typing, if nothing prompts install Git
 ```sh
 git --version
 ```
-2. [Browser](https://www.techradar.com/best/browser)
+2. [NPM](https://www.npmjs.com/)
+* Open terminal and check installation typing, if nothing prompts install NPM
+```sh
+npm
+```
+3. Install Npm dependencies
+* Open terminal and type, it will create node_modules with package.json file
+```sh
+npm i
+```
+4. [Browser](https://www.techradar.com/best/browser)
 
 <!-- USAGE EXAMPLES -->
 ## Usage

@@ -21,16 +21,11 @@ var Grafo = new GraphAdjList();
 var pQ = new codaPriorita();
 var pQ_r = new codaPriorita();
 var path;
-var tabella = new p5.Table();
 var diametro = 40;
 var scrivi;
 
 function setup() {
   angleMode(DEGREES); //imposta come unità di misura per gli angoli i gradi
-  tabella.addColumn("nodoCorrente");
-  tabella.addColumn("nodoVicino");
-  tabella.addColumn("distanzaVicino");
-  tabella.addColumn("distanzaEffettiva");
   w = document.getElementById("check").offsetWidth;
   canvas = createCanvas(w, 600).parent("check"); //inserisce il canvas in check
   //Drag&Drop handling
@@ -123,7 +118,8 @@ function iniziaGrafo() {
   for (let i = 0; i < 3; i++) {
     str = str.replace(str.split(" ")[0] + " ", "");
   }
-  for (let i = 0; i < str.length; i++) {
+  //for (let i = 0; i < str.length; i++) {
+  while (str != "") {
     //inizializza nodi e collegamenti nel grafo
     if (!nomi.has(str.split(" ", 3)[0])) {
       n1 = new Node(str.split(" ", 3)[0], r * cos(k), r * sin(k));

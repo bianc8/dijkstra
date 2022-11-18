@@ -30,9 +30,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-[![Home Page Screen Shot][home-screen]](https://github.com/enricBiancott0/dijkstra)
-[![Select start node][start-node]](https://github.com/enricBiancott0/verifica)
-[![Select end node][end-node]](https://github.com/enricBiancott0/dijkstra)
 [![Dijkstra prova.txt][dijkstra-prova]](https://github.com/enricBiancott0/dijkstra)
 
 This project was made by Enrico Biancotto in 2017, it is a Javascript implementation of Dijkstra's Algorithm.
@@ -97,6 +94,9 @@ npm i
 Open index.html, drag and drop prova.txt or prova-2.txt or prova-3.txt
 ## See
 [![Dijkstra prova.txt][drag-drop]](https://github.com/enricBiancott0/dijkstra)
+[![Home Page Screen Shot][home-screen]](https://github.com/enricBiancott0/dijkstra)
+[![Select start node][start-node]](https://github.com/enricBiancott0/verifica)
+[![Select end node][end-node]](https://github.com/enricBiancott0/dijkstra)
 
 
 <!-- CONTACT -->
